@@ -6,12 +6,12 @@ dependencies:
   pre:
     - npm config set spin false
     - npm install -g npm@^3
-    - npm install -g bower
+    - npm install bower
 
   override:
     - npm install
-    - bower install
+    - ./node_modules/.bin/bower install
 
 test:
   override:
-    - ./node_modules/ember-cli/bin/ember test
+    - ./node_modules/.bin/ember test
